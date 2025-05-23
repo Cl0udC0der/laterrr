@@ -1,0 +1,15 @@
+## check docker
+docker ps -a
+
+## enter the pgsql server in docker
+docker exec -it db psql -U postgres
+
+## Run the database server
+docker compose up -d db
+
+## Run the backend server
+docker compose up -d flaskapp
+## Break it 
+docker compose down -v
+docker compose up --build
+
